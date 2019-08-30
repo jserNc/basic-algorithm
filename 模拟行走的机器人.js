@@ -71,10 +71,10 @@ var robotSim = function(commands, obstacles) {
           } else {
             location[1] += command
           }
-
           break;
         case 2:
           obstacle = obstacles.filter(o => o[1] === location[1]).sort((o1, o2) => o1[0] - o2[0]).find(o => o[0] > location[0] && o[0] <= location[0] + command)
+
           if (obstacle) {
             location[0] = obstacle[0] - 1
           } else {
