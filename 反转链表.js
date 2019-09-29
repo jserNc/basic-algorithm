@@ -19,14 +19,14 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  let temp=null;
-  while(head) {
+  let temp = null;
+  while (head) {
     // 层层包裹 temp
-    temp={
-      val:head.val,
-      next:temp
+    temp = {
+      val: head.val,
+      next: temp
     }
-    head=head.next;
+    head = head.next;
   }
   return temp;
 };
